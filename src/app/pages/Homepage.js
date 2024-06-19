@@ -75,7 +75,66 @@ export default function Homepage() {
       id: 1,
     },
   ];
-
+  const products1 = [
+    {
+      productTitle: "COCOSMILE CUPS",
+      productMetaTitle: "Coco Cap Fun Charm Thermos Cup",
+      productPrice: "$35.00",
+      productOldPrice: "Nguyen",
+      id: 1,
+    },
+    {
+      productTitle: "COCOSMILE CUPS",
+      productMetaTitle: "Coco Cap Squeaker Cup",
+      productPrice: "$35.00",
+      productOldPrice: "Nguyen",
+      id: 1,
+    },
+    {
+      productTitle: "COCOSMILE CUPS",
+      productMetaTitle: "Animal Thermos Cup with Sleeve",
+      productPrice: "$35.00",
+      productOldPrice: "Nguyen",
+      id: 1,
+    },
+    {
+      productTitle: "COCOSMILE CUPS",
+      productMetaTitle: "Coco Puppet Fairy Cup",
+      productPrice: "$35.00",
+      productOldPrice: "Nguyen",
+      id: 1,
+    },
+  ];
+  const products2 = [
+    {
+      productTitle: "COCOSMILE CUPS",
+      productMetaTitle: "Coco Cap Fun Charm Thermos Cup",
+      productPrice: "$35.00",
+      productOldPrice: "Nguyen",
+      id: 1,
+    },
+    {
+      productTitle: "COCOSMILE CUPS",
+      productMetaTitle: "Coco Cap Squeaker Cup",
+      productPrice: "$35.00",
+      productOldPrice: "Nguyen",
+      id: 1,
+    },
+    {
+      productTitle: "COCOSMILE CUPS",
+      productMetaTitle: "Animal Thermos Cup with Sleeve",
+      productPrice: "$35.00",
+      productOldPrice: "Nguyen",
+      id: 1,
+    },
+    {
+      productTitle: "COCOSMILE CUPS",
+      productMetaTitle: "Coco Puppet Fairy Cup",
+      productPrice: "$35.00",
+      productOldPrice: "Nguyen",
+      id: 1,
+    },
+  ];
   const services = [
     {
       serviceTitle: "FREE SHIPPING",
@@ -159,8 +218,9 @@ export default function Homepage() {
           >
             <Tab eventKey="home" title="THERMAL WITH SLEEVE">
               <div className="row">
-                {products?.map((product) => (
+                {products?.map((product,i) => (
                   <ProductCard
+                    key={i}
                     productTitle={product.productTitle}
                     productMetaTitle="Coco Puppet Fairy Cup"
                     productPrice="$29.00"
@@ -171,8 +231,9 @@ export default function Homepage() {
             </Tab>
             <Tab eventKey="profile" title="THERMAL WITHOUT SLEEVE">
               <div className="row">
-                {products?.map((product) => (
+                {products1?.map((product,i) => (
                   <ProductCard
+                    key={i}
                     productTitle={product.productTitle}
                     productMetaTitle="Coco Puppet Fairy Cup"
                     productPrice="$29.00"
@@ -183,8 +244,9 @@ export default function Homepage() {
             </Tab>
             <Tab eventKey="longer-tab" title="TRITAN ROUND">
               <div className="row">
-                {products?.map((product) => (
+                {products2?.map((product,i) => (
                   <ProductCard
+                    key={i}
                     productTitle={product.productTitle}
                     productMetaTitle="Coco Puppet Fairy Cup"
                     productPrice="$29.00"
@@ -291,27 +353,27 @@ export default function Homepage() {
         </div>
       </div>
 
-      <section class="best-selling-product ">
-        <h1 class="display-2 my-4 pt-5 text-center" style={{ fontWeight: 400 }}>
+      <section className="best-selling-product ">
+        <h1 className="display-2 my-4 pt-5 text-center" style={{ fontWeight: 400 }}>
           Our Collection
         </h1>
-        <hr class="w-50 mx-auto mb-5" />
+        <hr className="w-50 mx-auto mb-5" />
 
-        <div class="container">
+        <div className="container">
           <div className="row">
             <div className="col-md-6">
               <div
                 id="carouselId"
-                class="carousel slide"
+                className="carousel slide"
                 data-bs-ride="carousel"
               >
                 <div className="row">
                   <div className="col-md-2">
-                    <ol class="carousel-indicators">
+                    <ol className="carousel-indicators">
                       <li
                         data-bs-target="#carouselId"
                         data-bs-slide-to="0"
-                        class="active"
+                        className="active"
                         aria-current="true"
                         aria-label="First slide"
                       >
@@ -335,25 +397,25 @@ export default function Homepage() {
                     </ol>
                   </div>
                   <div className="col-md-10">
-                    <div class="carousel-inner" role="listbox">
-                      <div class="carousel-item active">
+                    <div className="carousel-inner" role="listbox">
+                      <div className="carousel-item active">
                         <img
                           src="https://cocosmilecups.com/cdn/shop/files/received_619201726824876_600x.jpg?v=1718022519"
                           className="d-block w-100"
                           alt=""
                         />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                           <h3>Title</h3>
                           <p>Description</p>
                         </div>
                       </div>
-                      <div class="carousel-item">
+                      <div className="carousel-item">
                         <img
                           src="https://cocosmilecups.com/cdn/shop/files/FCFB1DFB-E116-4EF4-8C6E-D8A2445B63AD_600x.jpg?v=1718022519"
                           className="d-block w-100"
                           alt=""
                         />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                           <h3>Title</h3>
                           <p>Description</p>
                         </div>
@@ -364,12 +426,12 @@ export default function Homepage() {
               </div>
             </div>
             <div className="col-md-6">
-              <div class="product-details">
+              <div className="product-details">
                 <h1>Coco Cap Fun Charm Thermos Cup</h1>
-                <p class="price">$35.00</p>
-                <p class="installments">
+                <p className="price">$35.00</p>
+                <p className="installments">
                   <span
-                    class="shopify-installments__content"
+                    className="shopify-installments__content"
                     id="shopify-installments-content"
                   >
                     Pay in 4 interest-free installments for orders over
@@ -377,13 +439,13 @@ export default function Homepage() {
                     <svg
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
-                      class="shop-pay-logo"
+                      className="shop-pay-logo"
                       viewBox="0 0 341 81"
                       fill="none"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M227.297 0C220.448 0 214.896 5.47237 214.896 12.2229V67.8125C214.896 74.563 220.448 80.0354 227.297 80.0354H328.357C335.206 80.0354 340.758 74.563 340.758 67.8125V12.2229C340.758 5.47237 335.206 0 328.357 0H227.297ZM244.999 55.8917V41.8012H253.993C262.21 41.8012 266.579 37.2604 266.579 30.379C266.579 23.4976 262.21 19.3782 253.993 19.3782H239.205V55.8917H244.999ZM244.999 24.8084H252.663C257.982 24.8084 260.595 26.9617 260.595 30.5663C260.595 34.1708 258.077 36.3242 252.9 36.3242H244.999V24.8084ZM276.795 56.6407C281.212 56.6407 284.109 54.7214 285.439 51.4445C285.819 55.0959 288.052 56.9684 292.896 55.7044L292.944 51.819C290.996 52.0063 290.616 51.3041 290.616 49.2912V39.7415C290.616 34.124 286.864 30.8003 279.93 30.8003C273.09 30.8003 269.148 34.1708 269.148 39.8819H274.468C274.468 37.1668 276.415 35.5284 279.835 35.5284C283.444 35.5284 285.107 37.0732 285.059 39.7415V40.9586L278.932 41.614C272.045 42.3629 268.246 44.9376 268.246 49.4316C268.246 53.1298 270.905 56.6407 276.795 56.6407ZM277.982 52.4276C274.99 52.4276 273.803 50.836 273.803 49.2443C273.803 47.091 276.273 46.1079 281.117 45.5462L284.917 45.1249C284.679 49.2443 281.877 52.4276 277.982 52.4276ZM310.537 57.7174C308.115 63.5221 304.22 65.2541 298.141 65.2541H295.528V60.4793H298.331C301.655 60.4793 303.27 59.4494 305.028 56.5002L294.246 31.5493H300.23L307.925 49.7593L314.764 31.5493H320.606L310.537 57.7174Z"
                         fill="rgb(90, 49, 244)"
                       ></path>
@@ -406,38 +468,38 @@ export default function Homepage() {
                     </svg>
                   </span>
                 </p>
-                <p class="description">
+                <p className="description">
                   Description Simply Dummy Text Of The Printing And Typesetting
                   Industry. Lorem Ipsum Has Been The Industry's Standard Dummy
                   Text Ever Since The 1500
                 </p>
-                <div class="reviews">
+                <div className="reviews">
                   <span>★★★★☆</span> <a href="#">2 Reviews</a>
                 </div>
-                <div class="stock-status">In Stock</div>
-                <div class="options">
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="color-options">
-                        <label for="color">Color :</label>
-                        <div class="color-buttons">
-                          <button class="color white" title="White"></button>
-                          <button class="color blue" title="Blue"></button>
-                          <button class="color orange" title="Orange"></button>
-                          <button class="color pink" title="Pink"></button>
-                          <button class="color purple" title="Purple"></button>
+                <div className="stock-status">In Stock</div>
+                <div className="options">
+                  <div className="row">
+                    <div className="col-6">
+                      <div className="color-options">
+                        <label htmlFor="color">Color :</label>
+                        <div className="color-buttons">
+                          <button className="color white" title="White"></button>
+                          <button className="color blue" title="Blue"></button>
+                          <button className="color orange" title="Orange"></button>
+                          <button className="color pink" title="Pink"></button>
+                          <button className="color purple" title="Purple"></button>
                         </div>
                       </div>
                     </div>
-                    <div class="col-6">
-                      <div class="capacity-options">
-                        <label for="capacity">Capacity :</label>
-                        <img src="images/Group 36.png" alt="" class="w-50" />
+                    <div className="col-6">
+                      <div className="capacity-options">
+                        <label htmlFor="capacity">Capacity :</label>
+                        <img src="images/Group 36.png" alt="" className="w-50" />
                       </div>
                     </div>
-                    <div class="col-6">
-                      <div class="style-options">
-                        <label for="style">Style :</label>
+                    <div className="col-6">
+                      <div className="style-options">
+                        <label htmlFor="style">Style :</label>
                         <img
                           src="images/Group 37.png"
                           alt=""
@@ -445,9 +507,9 @@ export default function Homepage() {
                         />
                       </div>
                     </div>
-                    <div class="col-6">
-                      <div class="quantity">
-                        <label for="quantity">Quantity :</label>
+                    <div className="col-6">
+                      <div className="quantity">
+                        <label htmlFor="quantity">Quantity :</label>
                         <img
                           src="images/Group 33.png"
                           alt=""
@@ -458,11 +520,11 @@ export default function Homepage() {
                   </div>
                 </div>
 
-                <div class="buttons">
-                  <button class="add-to-cart">Add To Cart</button>
-                  <button class="buy-now">Buy With Shopay</button>
+                <div className="buttons">
+                  <button className="add-to-cart">Add To Cart</button>
+                  <button className="buy-now">Buy With Shopay</button>
                 </div>
-                <div class="more-payment">
+                <div className="more-payment">
                   <a href="#">More Payment Options</a>
                 </div>
               </div>
@@ -473,11 +535,7 @@ export default function Homepage() {
 
       <section>
         <div className="form-popup">
-          <img
-            src="Group 26.png"
-            alt="Background"
-            className="background-image"
-          />
+       
           <div className="popup">
             <h2>SUBSCRIBE &amp; GET 10% OFF</h2>
             <p>Promotions, New Products And Sales. Directly To Your Inbox.</p>

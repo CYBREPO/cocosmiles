@@ -50,17 +50,17 @@ export default function Header() {
       </Navbar>
       <Navbar bg="white" data-bs-theme="light" className="pt-0 pb-3">
         <Container className="justify-content-end">
-          <div class="search-container">
+          <div className="search-container">
             <form action="/search" method="get">
               <input
-                class="search expandright"
+                className="search expandright"
                 id="searchright"
                 type="search"
                 name="q"
                 placeholder="What You Are Looking For?"
               />
-              <label class="button searchbutton" for="searchright">
-                <span class="mglass">&#9906;</span>
+              <label className="button searchbutton" htmlFor="searchright">
+                <span className="mglass">&#9906;</span>
               </label>
             </form>
           </div>
@@ -70,19 +70,19 @@ export default function Header() {
               focusable="false"
               width="20"
               height="16"
-              class="icon icon--header-email   "
+              className="icon icon--header-email   "
               viewBox="0 0 20 16"
             >
               <path
                 d="M19 4l-9 5-9-5"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.2"
+                strokeWidth="1.2"
               ></path>
               <path
                 stroke="currentColor"
                 fill="none"
-                stroke-width="1.2"
+                strokeWidth="1.2"
                 d="M1 1h18v14H1z"
               ></path>
             </svg>
@@ -93,7 +93,7 @@ export default function Header() {
               focusable="false"
               width="18"
               height="17"
-              class="icon icon--header-customer   "
+              className="icon icon--header-customer   "
               viewBox="0 0 18 17"
             >
               <circle
@@ -102,14 +102,14 @@ export default function Header() {
                 r="4"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.2"
-                stroke-linejoin="round"
+                strokeWidth="1.2"
+                strokeLinejoin="round"
               ></circle>
               <path
                 d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.2"
+                strokeWidth="1.2"
               ></path>
             </svg>
           </Nav.Link>
@@ -119,14 +119,14 @@ export default function Header() {
               focusable="false"
               width="21"
               height="20"
-              class="icon icon--header-shopping-cart   "
+              className="icon icon--header-shopping-cart   "
               viewBox="0 0 21 20"
             >
               <path
                 d="M0 1H4L5 11H17L19 4H8"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.2"
+                strokeWidth="1.2"
               ></path>
               <circle
                 cx="6"
@@ -134,7 +134,7 @@ export default function Header() {
                 r="2"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.2"
+                strokeWidth="1.2"
               ></circle>
               <circle
                 cx="16"
@@ -142,7 +142,7 @@ export default function Header() {
                 r="2"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1.2"
+                strokeWidth="1.2"
               ></circle>
             </svg>
             <Cartcount>0</Cartcount>
