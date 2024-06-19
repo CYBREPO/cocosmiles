@@ -22,20 +22,20 @@ const getData = async () => {
   return { props: { productsData: data } };
 };
 
-const CarouselItem = styled.div`
-  height: 21px;
-  width: 21px;
-  border-radius: 50%;
-  background: black;
-  position: absolute;
-  top: -10px;
-  right: -11px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 11px;
-`;
+// const CarouselItem = styled.div`
+//   height: 21px;
+//   width: 21px;
+//   border-radius: 50%;
+//   background: black;
+//   position: absolute;
+//   top: -10px;
+//   right: -11px;
+//   color: white;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 11px;
+// `;
 
 export default function Homepage() {
   var settings = {
