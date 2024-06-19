@@ -10,8 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
 import Form from "react-bootstrap/Form";
-import styled from 'styled-components/macro';
-
+import styled from "styled-components";
 
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
 

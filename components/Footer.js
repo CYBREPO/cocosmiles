@@ -1,5 +1,6 @@
 
 //page.js
+import Image from "react-bootstrap/Image";
 
 export default function Footer() {
     return (
@@ -8,7 +9,7 @@ export default function Footer() {
                 <div className="container">
                     <div className="footer-container">
                         <div className="footer-section">
-                            <img src="path_to_logo.png" alt="CocoSmile Logo" className="footer-logo" />
+                        <Image src={"/images/logo.png"} className="footer-logo" />
                             <h3>Why We Exist?</h3>
                             <p>We Recognized A Gap In The Market For Children Water Cups, CocoSmile Is Dedicated To Providing
                                 High-Quality And Unique Water Cups For Children And Adults Alike. Join Us In The Movement To Sip

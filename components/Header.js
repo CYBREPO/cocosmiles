@@ -4,13 +4,12 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import styled from 'styled-components/macro';
+import Image from "react-bootstrap/Image";
 
+import styled from "styled-components";
 
 export default function Header() {
-  const Image = styled.img`
-    width: 300px;
-  `;
+ 
   const Cartcount = styled.div`
     height: 21px;
     width: 21px;
