@@ -4,7 +4,8 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import styled from "styled-components";
+import styled from 'styled-components/macro';
+
 
 export default function Header() {
   const Image = styled.img`
