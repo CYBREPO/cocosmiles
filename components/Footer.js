@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="container">
                     <div className="footer-container">
                         <div className="footer-section">
-                        <Image src={"/images/logo.png"} className="footer-logo" alt="" />
+                        <img src={"/images/logo.png"} className="footer-logo" alt="" />
                             <h3>Why We Exist?</h3>
                             <p>We Recognized A Gap In The Market For Children Water Cups, CocoSmile Is Dedicated To Providing
                                 High-Quality And Unique Water Cups For Children And Adults Alike. Join Us In The Movement To Sip
