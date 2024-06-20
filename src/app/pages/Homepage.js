@@ -22,20 +22,6 @@ const getData = async () => {
   return { props: { productsData: data } };
 };
 
-// const CarouselItem = styled.div`
-//   height: 21px;
-//   width: 21px;
-//   border-radius: 50%;
-//   background: black;
-//   position: absolute;
-//   top: -10px;
-//   right: -11px;
-//   color: white;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   font-size: 11px;
-// `;
 
 export default function Homepage() {
   var settings = {
@@ -231,9 +217,9 @@ export default function Homepage() {
             </Tab>
             <Tab eventKey="profile" title="THERMAL WITHOUT SLEEVE">
               <div className="row">
-                {products1?.map((product,i) => (
+                {products1?.map((product,j) => (
                   <ProductCard
-                    key={i}
+                    key={j}
                     productTitle={product.productTitle}
                     productMetaTitle="Coco Puppet Fairy Cup"
                     productPrice="$29.00"
@@ -244,9 +230,9 @@ export default function Homepage() {
             </Tab>
             <Tab eventKey="longer-tab" title="TRITAN ROUND">
               <div className="row">
-                {products2?.map((product,i) => (
+                {products2?.map((product,k) => (
                   <ProductCard
-                    key={i}
+                    key={k}
                     productTitle={product.productTitle}
                     productMetaTitle="Coco Puppet Fairy Cup"
                     productPrice="$29.00"
@@ -338,7 +324,7 @@ export default function Homepage() {
               <hr />
               <p>
                 Simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
+                Lorem Ipsum has been the industry&apos;s standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen book. It has survived
                 not only five centuries, but also the leap into electronic
@@ -470,7 +456,7 @@ export default function Homepage() {
                 </p>
                 <p className="description">
                   Description Simply Dummy Text Of The Printing And Typesetting
-                  Industry. Lorem Ipsum Has Been The Industry's Standard Dummy
+                  Industry. Lorem Ipsum Has Been The Industry&apos;s Standard Dummy
                   Text Ever Since The 1500
                 </p>
                 <div className="reviews">
@@ -560,8 +546,8 @@ export default function Homepage() {
         <div className="features-container">
           <div className="container">
             <div className="row">
-              {services?.map((service) => (
-                <div className="col-md-3">
+              {services?.map((service,l) => (
+                <div className="col-md-3" key={l}>
                   <div className="feature">
                     <img
                       src="images/icon1.png"
@@ -586,7 +572,7 @@ export default function Homepage() {
             <hr />
             <p>
               Simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
+              Ipsum has been the industry&apos;s standard dummy text ever since the
               1500s, when an unknown printer took a galley of type and scrambled
               it to make a type specimen book. It has survived not only five
               centuries, but also the leap into electronic typesetting,

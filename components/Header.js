@@ -37,7 +37,7 @@ export default function Header() {
       <Navbar bg="white" data-bs-theme="light">
         <Container>
           <Navbar.Brand href="#home">
-            <Image src={"/images/logo.png"} />
+            <Image src={"/images/logo.png"} alt="" />
           </Navbar.Brand>
           <Nav className="ms-auto">
             <Nav.Link href="#home" className="active">

@@ -9,7 +9,7 @@ function ProductCard({
 }) {
   return (
     <React.Fragment key={ProductCard.id}>
-      <div className="col-md-3" key={ProductCard.key}>
+      <div className="col-md-3" key={ProductCard.id}>
         <div className="product-card">
           <div className="save-tag">SAVE 3%</div>
           <img
@@ -22,8 +22,8 @@ function ProductCard({
           </div>
           <div className="price">{productPrice}</div>
           <div className="color-options">
-            {colors.map((color) => (
-              <span className={color}></span>
+            {colors.map((color,i) => (
+              <span key={i} className={color}></span>
             ))}
           </div>
         </div>
