@@ -1,0 +1,47 @@
+
+.categorycard {
+    position: relative;
+    font-family: "Chong Modern", serif;
+    overflow: hidden;
+
+    img {
+        transition: all 0.5s;
+    }
+
+    .categorycardCaption {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: all 0.5s;
+        transform: scale(0);
+        transform-origin: center;
+        max-width: 80%;
+        margin: auto;
+        text-align: center;
+        right: 0;
+    }
+
+    a {
+        color: white;
+    }
+
+    &:hover .categorycardCaption {
+
+
+        transform: scale(1.1);
+
+    }
+
+    &:hover img {
+        transform: scale(1);
+    }
+}

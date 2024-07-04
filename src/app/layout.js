@@ -3,7 +3,7 @@
 // import './Styles.module.scss'
 // import "./globals.css";
 
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 import AddBootstrap from "./AddBootstrap";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -18,10 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body >
+      <body style={{ fontFamily: "poppins" }}>
         <Header />
         <AddBootstrap />
-          {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

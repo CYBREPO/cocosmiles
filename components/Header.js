@@ -5,25 +5,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
-
 import styled from "styled-components";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Link from 'next/link'
 
 export default function Header() {
- 
-  const Cartcount = styled.div`
-    height: 21px;
-    width: 21px;
-    border-radius: 50%;
-    background: black;
-    position: absolute;
-    top: -10px;
-    right: -11px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 11px;
-  `;
   return (
     <div>
       {/* navbar */}
@@ -33,21 +19,26 @@ export default function Header() {
           <img src={"/images/Group 30.png"} alt="" style={{ width: "15%" }} />
         </div>
       </div>
-
-      <Navbar bg="white" data-bs-theme="light">
+      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">
-            <Image src={"/images/logo.png"} alt="" />
-          </Navbar.Brand>
-          <Nav className="ms-auto">
-            <Nav.Link href="#home" className="active">
-              How to
-            </Nav.Link>
-            <Nav.Link href="#features">Categories</Nav.Link>
-            <Nav.Link href="#pricing">Shop</Nav.Link>
-          </Nav>
+          <div className="d-flex justify-content-between">
+            <Navbar.Brand href="#home">
+              {" "}
+              <Image src={"/images/logo.png"} alt="" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          </div>
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto">
+              <Link className="nav-link" href="/">Home</Link>
+              <Link className="nav-link" href="/category">Category</Link>
+              <Link className="nav-link" href="/shop">Shop</Link>
+
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
+
       <Navbar bg="white" data-bs-theme="light" className="pt-0 pb-3">
         <Container className="justify-content-end">
           <div className="search-container">
@@ -145,7 +136,7 @@ export default function Header() {
                 strokeWidth="1.2"
               ></circle>
             </svg>
-            <Cartcount>0</Cartcount>
+            <span className="cartcount">0</span>
           </Nav.Link>
         </Container>
       </Navbar>

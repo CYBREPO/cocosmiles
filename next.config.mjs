@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  // experimental: {
+  //   appDir: true,
+  // },
+  // compiler: {
+  //   styledComponents: true,
+  // },
+  
+};
 
 export default nextConfig;
-
 
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
@@ -12,6 +19,3 @@ export default nextConfig;
 // };
 
 // export default nextConfig;
-
-
-
