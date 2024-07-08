@@ -133,7 +133,7 @@ function SingleProductDetails({
                 Pay in 4 interest-free installments for orders over
                 <b>$50.00</b> with{" "}
                 <img
-                  src={"/images/shop.svg"}
+                  src={"images/shop.svg"}
                   className="footer-logo"
                   alt=""
                   width={80}

@@ -30,7 +30,7 @@ export default function Header() {
             </div>
             <div className="col-md-6 d-flex justify-content-end">
               <img
-                src={"/images/Group 30.png"}
+                src={"images/Group 30.png"}
                 alt=""
                 style={{ width: "25%" }}
               />
@@ -43,7 +43,7 @@ export default function Header() {
           <div className="d-flex justify-content-between">
             <Navbar.Brand href="#home">
               {" "}
-              <Image src={"/images/logo.png"} alt="" />
+              <Image src={"images/logo.png"} alt="" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           </div>

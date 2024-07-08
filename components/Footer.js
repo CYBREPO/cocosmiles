@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="container">
           <div className="footer-container">
             <div className="footer-section">
-              <img src={"/images/logo.png"} className="footer-logo" alt="" />
+              <img src={"images/logo.png"} className="footer-logo" alt="" />
               <h3>Why We Exist?</h3>
               <p>
                 We Recognized A Gap In The Market For Children Water Cups,
