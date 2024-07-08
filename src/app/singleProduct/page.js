@@ -33,7 +33,7 @@ const Singleproductdetails = () => {
 
   return (
     <div className="container">
-      <>
+ 
         <SingleProductDetails
           themeType="lightTheme"
           singleproducttitle={proddata["title"]}
@@ -42,7 +42,7 @@ const Singleproductdetails = () => {
           singleproductcapacity={proddata["dimensions.depth"]}
           singleproductstyles="Straw Cup"
         />
-      </>
+
       <Tabs defaultActiveKey="Description" className="mb-3 mt-5">
         <Tab eventKey="Description" title="Description">
           <p>{proddata["description"]}</p>

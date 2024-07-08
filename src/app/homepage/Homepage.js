@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
-import Aboutus from "../../../components/Aboutus/aboutus";
 import SubscirbeForm from "../../../components/SubscribeForm/SubscirbeForm";
 import Services from "../../../components/Services/Services";
 import SingleProductDetails from "../../../components/SingleProductDetails/SingleProductDetails";
@@ -18,6 +17,7 @@ import Modal from "react-bootstrap/Modal";
 
 import "./Homepage.css";
 import ReviewForm from "../../../components/ReviewForm/ReviewForm";
+import Aboutus from "../../../components/Aboutus/Aboutus";
 
 export default function Homepage() {
   const [show, setShow] = useState(false);
@@ -61,12 +61,20 @@ export default function Homepage() {
   };
 
   const [proddata, setproddata] = useState([]);
+  const [singleproddata, setsingleproddata] = useState({});
 
   useEffect(() => {
     const getData = async () => {
       const query = await fetch("https://dummyjson.com/products");
       const response = await query.json();
       setproddata(response.products);
+
+
+      const query2 = await fetch("https://dummyjson.com/products/1");
+      const prodresponse = await query2.json();
+      setsingleproddata(prodresponse);
+
+
     };
     getData();
   }, []);
@@ -249,7 +257,14 @@ export default function Homepage() {
         <hr className="w-50 mx-auto mb-5" />
 
         <div className="container">
-          <SingleProductDetails themeType="greenTheme" />
+        <SingleProductDetails
+          themeType="lightTheme"
+          singleproducttitle={singleproddata["title"]}
+          singleproductprice={singleproddata["price"]}
+          singleproductdescription={singleproddata["description"]}
+          singleproductcapacity={singleproddata["dimensions.depth"]}
+          singleproductstyles="Straw Cup"
+        />
         </div>
       </section>
 
