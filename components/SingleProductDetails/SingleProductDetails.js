@@ -11,6 +11,7 @@ function SingleProductDetails({
   singleproductdescription,
   singleproductcapacity,
   singleproductstyles,
+  id
 }) {
   const [count, setCount] = useState(0);
 
@@ -22,7 +23,7 @@ function SingleProductDetails({
     setCount(count - 1);
   }
   return (
-    <div className="single-product-details">
+    <div className="single-product-details" key={id}>
       <div className="row">
         <div className="col-md-6">
           <div

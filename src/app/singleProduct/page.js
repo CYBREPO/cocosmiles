@@ -41,6 +41,7 @@ const Singleproductdetails = () => {
           singleproductdescription={proddata["description"]}
           singleproductcapacity={proddata["dimensions.depth"]}
           singleproductstyles="Straw Cup"
+          id
         />
 
       <Tabs defaultActiveKey="Description" className="mb-3 mt-5">

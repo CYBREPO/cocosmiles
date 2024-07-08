@@ -10,7 +10,7 @@ function CategoryCard({
   return (
   
       <div className="categorycard" key={id}>
-        <img className="w-100" src={categoryImage} />
+        <img className="w-100" src={categoryImage} alt=""/>
         <h2 className="categorycardCaption">
           <a href="">{categoryTitle}</a>
         </h2>

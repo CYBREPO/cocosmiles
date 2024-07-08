@@ -264,6 +264,7 @@ export default function Homepage() {
           singleproductdescription={singleproddata["description"]}
           singleproductcapacity={singleproddata["dimensions.depth"]}
           singleproductstyles="Straw Cup"
+          id
         />
         </div>
       </section>
