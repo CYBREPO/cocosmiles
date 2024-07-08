@@ -11,19 +11,15 @@
   "dependencies": {
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.15.20",
-    "@mui/material-nextjs": "^5.15.11",
+
+
     "bootstrap": "^5.3.3",
     "next": "14.2.4",
-    "next-range-slider": "^1.0.5",
-    "next-routes": "^1.4.2",
-    "nouislider": "^15.8.1",
-    "nouislider-react": "^3.4.2",
     "react": "^18",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18",
     "react-range-slider-input": "^3.0.7",
+    "react-router-dom": "^6.24.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.11"
@@ -34,6 +30,7 @@
     "postcss": "^8",
     "sass": "^1.77.5",
     "tailwindcss": "^3.4.1"
+
   },
   "resolutions": {
     "styled-components": "^5"

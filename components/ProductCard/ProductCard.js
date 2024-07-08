@@ -13,7 +13,7 @@ function ProductCard({
 
   return (
     <React.Fragment key={ProductCard.id}>
-      <div className="col-md-3" key={ProductCard.id}>
+      <div className="col-6 col-md-3" key={ProductCard.id}>
         <div className="product-card">
           {/* <div className="save-tag">SAVE 3%</div> */}
           <img

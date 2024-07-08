@@ -8,30 +8,56 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
-import Form from "react-bootstrap/Form";
 import Aboutus from "../../../components/Aboutus/aboutus";
 import SubscirbeForm from "../../../components/SubscribeForm/SubscirbeForm";
 import Services from "../../../components/Services/Services";
 import SingleProductDetails from "../../../components/SingleProductDetails/SingleProductDetails";
 
-import "./Homepage.css";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
+import "./Homepage.css";
+import ReviewForm from "../../../components/ReviewForm/ReviewForm";
 
 export default function Homepage() {
-  const [count, setCount] = useState(0);
+  const [show, setShow] = useState(false);
 
-  function incremenCount() {
-    setCount(count + 1);
-  }
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-  function decrementCount() {
-    setCount(count - 1);
-  }
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const [proddata, setproddata] = useState([]);
@@ -39,12 +65,12 @@ export default function Homepage() {
   useEffect(() => {
     const getData = async () => {
       const query = await fetch("https://dummyjson.com/products");
-
       const response = await query.json();
       setproddata(response.products);
     };
     getData();
   }, []);
+
   return (
     <div>
       <Carousel className="bannerCarousel">
@@ -223,7 +249,7 @@ export default function Homepage() {
         <hr className="w-50 mx-auto mb-5" />
 
         <div className="container">
-          <SingleProductDetails/>
+          <SingleProductDetails themeType="greenTheme" />
         </div>
       </section>
 
@@ -231,9 +257,9 @@ export default function Homepage() {
 
       <Services />
 
-      <div className="secton-video py-5 my-4">
+      <div className="secton-video py-md-5 my-md-4">
         <div className="row w-100 mx-auto justify-content-end align-items-center">
-          <div className="col-md-5 text-center pe-5 me-5">
+          <div className="col-md-5 text-center mb-5 mb-md-0 pe-md-5 me-md-5">
             <h2 className="display-7 my-4 text-center">KNOW MORE</h2>
             <h2 className="display-5 my-4 text-center">About Us</h2>
             <hr />
@@ -261,7 +287,49 @@ export default function Homepage() {
 
       <section className="review-slider">
         <div className="container">
-          <Slider {...settings}>
+          <h2 className="display-5 my-4 text-center">About Us</h2>
+
+          <div className="row justify-content-between">
+            <div className="col-7 col-md-6">
+              <div className="d-flex align-items-end">
+                <h3 className="display-5 my-0 text-center">4.5</h3>
+                <div className="stars d-flex">
+                  <div className="fullstar">★</div>
+                  <div className="fullstar">★</div>
+                  <div className="fullstar">★</div>
+                  <div className="fullstar">★</div>
+                  <div className="nostart">☆</div>
+                </div>
+                (20 Reviews)
+              </div>
+            </div>
+            <div className="col-5 col-md-6 d-flex mt-3 mt-md-0 justify-content-md-end align-items-center">
+              <Button variant="success" onClick={handleShow}>
+                Write a Review
+              </Button>
+
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Write your review</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <ReviewForm />
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                  <Button variant="primary" onClick={handleClose}>
+                    Save Changes
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+            </div>
+          </div>
+
+          <hr />
+
+          <Slider className="mt-5" {...settings}>
             <div className="card">
               <div className="d-flex">
                 <img
@@ -271,7 +339,13 @@ export default function Homepage() {
                 <div>
                   <h2>Akhil Reddy</h2>
                   <h4>Software Engineer At Recro</h4>
-                  <div className="stars">★★★★☆</div>
+                  <div className="stars d-flex">
+                    <div className="fullstar">★</div>
+                    <div className="fullstar">★</div>
+                    <div className="fullstar">★</div>
+                    <div className="fullstar">★</div>
+                    <div className="nostart">☆</div>
+                  </div>
                 </div>
               </div>
               <p>
@@ -294,7 +368,13 @@ export default function Homepage() {
                 <div>
                   <h2>Akhil Reddy</h2>
                   <h4>Software Engineer At Recro</h4>
-                  <div className="stars">★★★★☆</div>
+                  <div className="stars d-flex">
+                    <div className="fullstar">★</div>
+                    <div className="fullstar">★</div>
+                    <div className="fullstar">★</div>
+                    <div className="fullstar">★</div>
+                    <div className="nostart">☆</div>
+                  </div>
                 </div>
               </div>
               <p>
@@ -317,7 +397,13 @@ export default function Homepage() {
                 <div>
                   <h2>Akhil Reddy</h2>
                   <h4>Software Engineer At Recro</h4>
-                  <div className="stars">★★★★☆</div>
+                  <div className="stars d-flex">
+                    <div className="fullstar">★</div>
+                    <div className="fullstar">★</div>
+                    <div className="fullstar">★</div>
+                    <div className="fullstar">★</div>
+                    <div className="nostart">☆</div>
+                  </div>
                 </div>
               </div>
               <p>

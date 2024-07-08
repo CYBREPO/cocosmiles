@@ -64,12 +64,12 @@ export default function Categories() {
           </Slider>
         </div>
       </section>
-      <div className="allproductswithfilters pt-5">
+      <div className="allproductswithfilters py-5">
         <Container>
           <BreadCrumb />
 
-          <Row>
-            <Col xl={3}>
+          <Row className="w-100">
+            <div className="col-md-3">
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Availability</Accordion.Header>
@@ -124,8 +124,8 @@ export default function Categories() {
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
-            </Col>
-            <Col xs={9}>
+            </div>
+            <div className="col-md-9">
               <div className="row">
                 {/* {proddata.map((product, i) =>
                   product.availabilityStatus == "Low Stock" ? (
@@ -153,7 +153,7 @@ export default function Categories() {
                   />
                 ))}
               </div>
-            </Col>
+            </div>
           </Row>
         </Container>
       </div>

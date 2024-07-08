@@ -26,17 +26,29 @@
     --text-font-family-3: "poppins", sans-serif;
     --color-green: #64C194;
 }
-body{
-    font-family: "poppins", sans-serif;;
+
+body {
+    font-family: "poppins", sans-serif;
 }
+
+dl,
+ol,
+ul {
+    padding: 0 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
 button:focus {
     outline: none !important;
     box-shadow: none !important;
 }
 
-.container {
-    max-width: 1600px !important;
-}
+// .container {
+//     max-width: 1600px !important;
+// }
 
 .play-fair {
     font-family: var(--text-font-family-2);
@@ -44,6 +56,12 @@ button:focus {
 
 .w-50 {
     max-width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .btn {
+        font-size: 12px !important;
+    }
 }
 
 .btn {
@@ -61,10 +79,15 @@ button:focus {
 
 
     text-align: center;
-    font-size: 14px !important;
+
+    @media screen and (min-width: 992px) {
+        font-size: 14px !important;
+    }
+
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 
 
 
@@ -188,8 +211,15 @@ p {
 // product card
 
 .latest-collection {
+    @media screen and (max-width: 992px) {
+        overflow-x: hidden;
+    }
+
     img {
-        height: 1039px;
+        @media screen and (min-width: 992px) {
+            height: 1039px;
+        }
+
         width: 100%;
         filter: brightness(0.5);
         transition: all 0.5s ease-in-out;
@@ -208,7 +238,11 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3em;
+
+    @media screen and (min-width: 992px) {
+        font-size: 3em;
+    }
+
     width: 100%;
     text-align: center;
     color: white;
@@ -234,7 +268,10 @@ p {
     padding: 1%;
 
     img {
-        height: 800px;
+        @media screen and (min-width: 992px) {
+            height: 800px;
+        }
+
         width: 100%;
     }
 
@@ -247,13 +284,20 @@ p {
 
     .img-1 {
 
-        height: 270px;
+        @media screen and (min-width: 992px) {
+            height: 270px;
+        }
+
         width: 100%;
     }
 }
 
 .stackimages {
-    height: 530px;
+    height: 162px;
+
+    @media screen and (min-width: 992px) {
+        height: 530px;
+    }
 
     img {
         width: 100%;
@@ -273,7 +317,13 @@ p {
 .nav-tabs {
     justify-content: center;
     border: 0 !important;
-    max-width: 50%;
+
+    @media screen and (min-width: 992px) {
+        max-width: 90%;
+    }
+
+ 
+
     margin: auto;
     letter-spacing: 1px;
 
@@ -320,7 +370,9 @@ p {
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 0 14px;
 
     .background-image {
         width: 100%;
@@ -390,7 +442,10 @@ p {
         margin: 10px;
         text-align: center;
         transition: box-shadow 0.3s ease, transform 0.3s ease;
-        min-height: 264px;
+
+        @media screen and (min-width: 992px) {
+            min-height: 264px;
+        }
     }
 
     .feature:hover {
@@ -423,7 +478,7 @@ p {
 // reviews
 section.review-slider {
     background: rgba(176, 209, 254, 0.13);
-    padding: 100px 0;
+    padding: 50px 0 100px;
 }
 
 section.review-slider .container {
@@ -485,7 +540,11 @@ section.review-slider .container {
 .footer {
     background-color: #6fcf97;
     color: white;
-    padding: 40px 20px;
+
+    @media screen and (min-width: 992px) {
+        padding: 40px 20px;
+    }
+
     margin-top: auto;
 
     .footer-container {
@@ -709,8 +768,14 @@ section.review-slider .container {
     padding: 10px;
 }
 
-
+.slick-arrow {
+    display: none !important;
+}
 
 input.checkbox {
     margin-right: 10px;
+}
+
+.stars{
+    color: gold;
 }

@@ -126,23 +126,7 @@
         border: 1px solid #ccc;
     }
 
-    .cartquantity {
-        margin-bottom: 20px;
-        width: 100px;
-        height: 27px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background: white;
-        border-radius: 50px;
-
-        button {
-            border: 0;
-            background: white;
-            height: max-content;
-        }
-    }
-
+   
     #quantity {
         width: 50px;
         padding: 5px;

@@ -7,7 +7,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
 import styled from "styled-components";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Link from 'next/link'
+import Link from "next/link";
+import Carousel from "react-bootstrap/Carousel";
 
 export default function Header() {
   return (
@@ -15,8 +16,26 @@ export default function Header() {
       {/* navbar */}
       <div className="top-navbar">
         <div className="container">
-          <img src={"/images/Group 31.png"} alt="" style={{ width: "35%" }} />
-          <img src={"/images/Group 30.png"} alt="" style={{ width: "15%" }} />
+          <div className="row w-100 mx-auto justify-content-between align-items-center">
+            <div className="col-md-5">
+              <Carousel
+                className="bannerCarousel text-center w-100"
+                indicators={false}
+                fade={true}
+
+              >
+                <Carousel.Item className="text-white">Offer Messages Going on Here!</Carousel.Item>
+                <Carousel.Item className="text-white">Offer Going on Here!</Carousel.Item>
+              </Carousel>
+            </div>
+            <div className="col-md-6 d-flex justify-content-end">
+              <img
+                src={"/images/Group 30.png"}
+                alt=""
+                style={{ width: "25%" }}
+              />
+            </div>
+          </div>
         </div>
       </div>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
@@ -30,10 +49,15 @@ export default function Header() {
           </div>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Link className="nav-link" href="/">Home</Link>
-              <Link className="nav-link" href="/category">Category</Link>
-              <Link className="nav-link" href="/shop">Shop</Link>
-
+              <Link className="nav-link" href="/">
+                Home
+              </Link>
+              <Link className="nav-link" href="/category">
+                Category
+              </Link>
+              <Link className="nav-link" href="/shop">
+                Shop
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
