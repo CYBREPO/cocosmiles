@@ -6,7 +6,6 @@
 //   // compiler: {
 //   //   styledComponents: true,
 //   // },
-
 // };
 
 // export default nextConfig;
