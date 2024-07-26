@@ -50,8 +50,8 @@ const Singleproductdetails = () => {
           <p>{proddata["description"]}</p>
         </Tab>
         <Tab eventKey="Reviews" title={"Reviews" + "(" + reviews.length + ")"}>
-          {reviews.map((review) => (
-            <div className="comment d-flex my-5">
+          {reviews.map((review, i) => (
+            <div className="comment d-flex my-5" key={i}>
               <div className="comment-header w-100">
                 <div className="row w-100">
                   <div className="col-md-1">
