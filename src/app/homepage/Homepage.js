@@ -59,7 +59,40 @@ export default function Homepage() {
       },
     ],
   };
-
+  var productslidersettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const [proddata, setproddata] = useState([]);
   const [singleproddata, setsingleproddata] = useState({});
 
@@ -69,12 +102,11 @@ export default function Homepage() {
       const response = await query.json();
       setproddata(response.products);
 
-
       const query2 = await fetch("https://dummyjson.com/products/1");
       const prodresponse = await query2.json();
       setsingleproddata(prodresponse);
 
-
+      console.log(singleproddata["weight"]);
     };
     getData();
   }, []);
@@ -128,7 +160,7 @@ export default function Homepage() {
             fill
           >
             <Tab eventKey="home" title="THERMAL WITH SLEEVE">
-              <div className="row">
+              <Slider className="mt-5" {...productslidersettings}>
                 {proddata
                   .filter((item, i) => i < 4)
                   .map((product, i) => (
@@ -141,10 +173,10 @@ export default function Homepage() {
                       id={product.id}
                     />
                   ))}
-              </div>
+              </Slider>
             </Tab>
             <Tab eventKey="profile" title="THERMAL WITHOUT SLEEVE">
-              <div className="row">
+              <Slider className="mt-5" {...productslidersettings}>
                 {proddata
                   .filter((item, i) => i < 4)
                   .map((product, i) => (
@@ -157,10 +189,10 @@ export default function Homepage() {
                       id={product.id}
                     />
                   ))}
-              </div>
+              </Slider>
             </Tab>
             <Tab eventKey="longer-tab" title="TRITAN ROUND">
-              <div className="row">
+              <Slider className="mt-5" {...productslidersettings}>
                 {proddata
                   .filter((item, i) => i < 4)
                   .map((product, i) => (
@@ -173,7 +205,7 @@ export default function Homepage() {
                       id={product.id}
                     />
                   ))}
-              </div>
+              </Slider>
             </Tab>
           </Tabs>
 
@@ -247,32 +279,32 @@ export default function Homepage() {
         </div>
       </div>
 
+      <SubscirbeForm />
+
       <section className="best-selling-product ">
         <h1
-          className="display-2 my-4 pt-5 text-center"
+          className="display-2 text-black my-4 pt-5 text-center"
           style={{ fontWeight: 400 }}
         >
-          Our Collection
+          Best Sellers
         </h1>
         <hr className="w-50 mx-auto mb-5" />
 
         <div className="container">
-        <SingleProductDetails
-          themeType="lightTheme"
-          singleproducttitle={singleproddata["title"]}
-          singleproductprice={singleproddata["price"]}
-          singleproductdescription={singleproddata["description"]}
-          singleproductcapacity={singleproddata["dimensions.depth"]}
-          singleproductstyles="Straw Cup"
-          id
-        />
+          <SingleProductDetails
+            themeType="lightTheme"
+            singleproducttitle={singleproddata["title"]}
+            singleproductprice={singleproddata["price"]}
+            singleproductdescription={singleproddata["description"]}
+            singleproductcapacity={singleproddata["weight"]}
+            singleproductreviews={singleproddata["weight"]}
+            singleproductstyles="Straw Cup"
+            id
+          />
         </div>
       </section>
 
-      <SubscirbeForm />
-
       <Services />
-
       <div className="secton-video py-md-5 my-md-4">
         <div className="row w-100 mx-auto justify-content-end align-items-center">
           <div className="col-md-5 text-center mb-5 mb-md-0 pe-md-5 me-md-5">
@@ -303,8 +335,7 @@ export default function Homepage() {
 
       <section className="review-slider">
         <div className="container">
-          <h2 className="display-5 my-4 text-center">About Us</h2>
-
+          <h2 className="display-5 my-4 text-center">Customer reviews</h2>
           <div className="row justify-content-between">
             <div className="col-7 col-md-6">
               <div className="d-flex align-items-end">

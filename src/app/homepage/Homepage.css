@@ -1,5 +1,5 @@
 .best-selling-product {
-    background-color: var(--color-green);
+    /* background-color: var(--color-green); */
     color: white;
     padding: 0 0 50px;
     font-family: var(--text-font-family);
@@ -41,7 +41,7 @@
     }
 
     .installments {
-        color: #e2e2e2;
+        color: #959595;
         margin-bottom: 10px;
 
         svg {
@@ -74,7 +74,6 @@
     }
 
     .stock-status {
-        color: #5CA16F;
         margin-bottom: 20px;
     }
 
@@ -126,7 +125,7 @@
         border: 1px solid #ccc;
     }
 
-   
+
     #quantity {
         width: 50px;
         padding: 5px;

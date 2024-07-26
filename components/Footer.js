@@ -1,5 +1,11 @@
 //page.js
+"use client";
+
 import Image from "react-bootstrap/Image";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -8,7 +14,6 @@ export default function Footer() {
         <div className="container">
           <div className="footer-container">
             <div className="footer-section">
-              <img src={"images/logo.png"} className="footer-logo" alt="" />
               <h3>Why We Exist?</h3>
               <p>
                 We Recognized A Gap In The Market For Children Water Cups,
@@ -153,9 +158,17 @@ export default function Footer() {
           <div className="row justify-content-between align-items-center">
             <div className="col-md-6">
               <div className="d-md-flex">
-                <button className="currency-button">
-                  USD $ <span>&#x25BC;</span>
-                </button>
+                <DropdownButton
+                  id="dropdown-basic-button"
+                  title="United States (USD $)"
+                  className="bg-transparent border-1"
+                  variant="outline-light"
+                >
+                  <Dropdown.Item href="#/action-2">
+                    France (EUR €)
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Italy (EUR €)</Dropdown.Item>
+                </DropdownButton>
                 <p>All Rights Reserved CocoSmile Cups - 2024</p>
               </div>
             </div>

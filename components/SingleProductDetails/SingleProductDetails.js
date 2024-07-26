@@ -11,10 +11,11 @@ function SingleProductDetails({
   singleproductdescription,
   singleproductcapacity,
   singleproductstyles,
-  id
+  singleproductreviews,
+  id,
 }) {
   const [count, setCount] = useState(0);
-
+  const [selectedOption, setSelectedOption] = useState("Direct Drinking");
   function incremenCount() {
     setCount(count + 1);
   }
@@ -22,6 +23,7 @@ function SingleProductDetails({
   function decrementCount() {
     setCount(count - 1);
   }
+
   return (
     <div className="single-product-details" key={id}>
       <div className="row">
@@ -125,6 +127,20 @@ function SingleProductDetails({
           >
             <h1>{singleproducttitle}</h1>
             <p className="price">$ {singleproductprice}</p>
+            <div className="d-flex">
+              <div className="reviews me-3">
+                <div className="stars d-flex">
+                  <div className="fullstar">★</div>
+                  <div className="fullstar">★</div>
+                  <div className="fullstar">★</div>
+                  <div className="fullstar">★</div>
+                  <div className="nostart">☆</div>
+                </div>
+              </div>
+              <span className="text-success">
+                {singleproductreviews} reviews
+              </span>
+            </div>
             <p className="installments">
               <span
                 className="shopify-installments__content"
@@ -141,15 +157,6 @@ function SingleProductDetails({
               </span>
             </p>
             <p className="description">{singleproductdescription}</p>
-            <div className="reviews">
-              <div className="stars d-flex">
-                <div className="fullstar">★</div>
-                <div className="fullstar">★</div>
-                <div className="fullstar">★</div>
-                <div className="fullstar">★</div>
-                <div className="nostart">☆</div>
-              </div>
-            </div>
             <div className="stock-status">In Stock</div>
             <div className="options">
               <div className="row">
@@ -168,7 +175,36 @@ function SingleProductDetails({
                 <div className="col-6">
                   <div className="capacity-options">
                     <label htmlFor="capacity">Capacity :</label>
-                    <div className="capsule">{singleproductcapacity}</div>
+                    <div className="radio-buttons">
+                      <label
+                        className={`radio-button ${
+                          selectedOption === "Direct Drinking" ? "selected" : ""
+                        }`}
+                      >
+                        <input
+                          type="radio"
+                          name="drinkingOption"
+                          value="Direct Drinking"
+                          checked={selectedOption === "Direct Drinking"}
+                          onChange={() => setSelectedOption("Direct Drinking")}
+                        />
+                        Direct Drinking
+                      </label>
+                      <label
+                        className={`radio-button ${
+                          selectedOption === "Straw Cup" ? "selected" : ""
+                        }`}
+                      >
+                        <input
+                          type="radio"
+                          name="drinkingOption"
+                          value="Straw Cup"
+                          checked={selectedOption === "Straw Cup"}
+                          onChange={() => setSelectedOption("Straw Cup")}
+                        />
+                        Straw Cup
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div className="col-6">
@@ -190,7 +226,6 @@ function SingleProductDetails({
                 </div>
               </div>
             </div>
-
             <div className="buttons">
               <button className="add-to-cart">Add To Cart</button>
               <button className="buy-now">Buy With Shopay</button>

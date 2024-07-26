@@ -22,10 +22,13 @@ export default function Header() {
                 className="bannerCarousel text-center w-100"
                 indicators={false}
                 fade={true}
-
               >
-                <Carousel.Item className="text-white">Offer Messages Going on Here!</Carousel.Item>
-                <Carousel.Item className="text-white">Offer Going on Here!</Carousel.Item>
+                <Carousel.Item className="text-white">
+                  Offer Messages Going on Here!
+                </Carousel.Item>
+                <Carousel.Item className="text-white">
+                  Offer Going on Here!
+                </Carousel.Item>
               </Carousel>
             </div>
             <div className="col-md-6 d-flex justify-content-end">
@@ -38,10 +41,11 @@ export default function Header() {
           </div>
         </div>
       </div>
+
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container>
           <div className="d-flex justify-content-between">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
               {" "}
               <Image src={"images/logo.png"} alt="" />
             </Navbar.Brand>

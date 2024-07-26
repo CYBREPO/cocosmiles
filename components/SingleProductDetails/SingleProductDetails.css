@@ -7,9 +7,10 @@
     }
 
     .carousel-indicators [data-bs-target] {
-    @media screen and (min-width: 992px) {
-        margin: 10px 0 !important;
-    }
+        @media screen and (min-width: 992px) {
+            margin: 10px 0 !important;
+        }
+
         display: block;
 
         &:first-child {
@@ -40,7 +41,6 @@
     }
 
     .installments {
-        color: #e2e2e2;
         margin-bottom: 10px;
 
         svg {
@@ -73,7 +73,6 @@
     }
 
     .stock-status {
-        color: #5CA16F;
         margin-bottom: 20px;
     }
 
@@ -136,6 +135,7 @@
         font-size: 18px;
         font-weight: 600;
         text-transform: capitalize;
+        border: 1px solid rgb(193 188 188);
 
         button {
             border: 0;
@@ -194,8 +194,8 @@
     justify-content: center;
     color: #5B5A5A;
     font-size: 18px;
-    font-weight: 600;
     text-transform: capitalize;
+    border: 1px solid rgb(193 188 188);
 }
 
 .lightTheme {
@@ -209,14 +209,41 @@
         color: black !important;
     }
 
-    .installments {
-        color: #959595;
-    }
+    .installments {}
 
     .capsule,
     .cartquantity {
         color: #333;
-        border: thin solid #333;
     }
 
+}
+
+
+
+
+/* src/RadioButtons.css */
+.radio-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.radio-button {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+
+
+    font-size: 12px;
+
+}
+
+.radio-button.selected {
+    background-color: #f0f0f0;
+    border-color: #000;
+}
+
+.radio-button input {
+    display: none;
 }

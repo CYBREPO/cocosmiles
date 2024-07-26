@@ -5,9 +5,6 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { useRouter } from "next/navigation";
 
 function BreadCrumb() {
-  const router = useRouter();
-
- console.log(router)
 
   return (
     <Breadcrumb>

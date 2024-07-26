@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import "./ProductCard.css";
+import { useRouter } from "next/navigation";
 
 // https://dummyjson.com/products
 function ProductCard({
@@ -8,21 +10,20 @@ function ProductCard({
   productPrice,
   colors = ["green", "yellow", "pink"],
   id,
-  productImage
+  productImage,
 }) {
-
   return (
-    <React.Fragment key={ProductCard.id}>
-      <div className="col-6 col-md-3" key={ProductCard.id}>
-        <div className="product-card">
+    <React.Fragment key={id}>
+      <div key={id}>
+        <a
+          href={`/singleProduct/?id=${id}`}
+          className="product-card text-black text-decoration-none"
+        >
           {/* <div className="save-tag">SAVE 3%</div> */}
-          <img
-            src={productImage}
-            alt="Coco Puppet Fairy Cup"
-          />
+          <img src={productImage} alt="Coco Puppet Fairy Cup" />
           <div className="product-title">
-            <b className="d-block mb-2">{productTitle}</b>
-            {productMetaTitle}
+            <b className="d-block mb-2 text-uppercase">{productTitle}</b>
+            <p className="text-lead text-capitalize">{productMetaTitle}</p>
           </div>
           <div className="price">{productPrice}</div>
           <div className="color-options">
@@ -30,7 +31,7 @@ function ProductCard({
               <span key={i} className={color}></span>
             ))}
           </div>
-        </div>
+        </a>
       </div>
     </React.Fragment>
   );

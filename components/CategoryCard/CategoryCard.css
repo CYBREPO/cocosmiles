@@ -1,4 +1,3 @@
-
 .categorycard {
     position: relative;
     font-family: "Chong Modern", serif;
@@ -35,10 +34,7 @@
     }
 
     &:hover .categorycardCaption {
-
-
         transform: scale(1.1);
-
     }
 
     &:hover img {
