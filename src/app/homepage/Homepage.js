@@ -105,8 +105,6 @@ export default function Homepage() {
       const query2 = await fetch("https://dummyjson.com/products/1");
       const prodresponse = await query2.json();
       setsingleproddata(prodresponse);
-
-      console.log(singleproddata["weight"]);
     };
     getData();
   }, []);

@@ -14,45 +14,36 @@ const Singleproductdetails = () => {
 
   const [reviews, setreviews] = useState([]);
 
-
-
-
-
   useEffect(() => {
     const getData = async () => {
-  var urlParams = new URLSearchParams(window.location.search);
+      var urlParams = new URLSearchParams(window.location.search);
 
       const prodquery = await fetch("https://dummyjson.com/products");
       const productresponse = await prodquery.json();
       setprodlist(productresponse.products);
 
-      const query = await fetch("https://dummyjson.com/products/2" );
+      const query = await fetch("https://dummyjson.com/products/2");
       const response = await query.json();
       setproddata(response);
       setreviews(response["reviews"]);
       console.log(query);
-      
     };
 
     getData();
   }, []);
 
-
-
-
-
   return (
     <div className="container">
- 
-        <SingleProductDetails
-          themeType="lightTheme"
-          singleproducttitle={proddata["title"]}
-          singleproductprice={proddata["price"]}
-          singleproductdescription={proddata["description"]}
-          singleproductcapacity={proddata["dimensions.depth"]}
-          singleproductstyles="Straw Cup"
-          id
-        />
+      <SingleProductDetails
+        themeType="lightTheme"
+        singleproducttitle={proddata["title"]}
+        singleproductprice={proddata["price"]}
+        singleproductdescription={proddata["description"]}
+        singleproductcapacity={proddata["dimensions.depth"]}
+        singleproductreviews={proddata["dimensions.depth"]}
+        singleproductstyles="Straw Cup"
+        id
+      />
 
       <Tabs defaultActiveKey="Description" className="mb-3 mt-5">
         <Tab eventKey="Description" title="Description">
