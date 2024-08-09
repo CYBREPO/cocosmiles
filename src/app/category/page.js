@@ -55,7 +55,7 @@ export default function Categories() {
               .filter((item, i) => i < 4)
               .map((category, i) => (
                 <CategoryCard
-                  key={category.title}
+                  key={i}
                   categoryTitle={category.title}
                   id={category.id}
                   categoryImage={category.images}
@@ -142,10 +142,10 @@ export default function Categories() {
                   )
                 )} */}
 
-                {proddata.map((product) => (
+                {proddata.map((product, i) => (
                   <div className="col-md-4">
                     <ProductCard
-                      key={product}
+                      key={i}
                       productImage={product.images[0]}
                       productTitle={product.title}
                       productMetaTitle={product.category}
