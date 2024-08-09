@@ -17,9 +17,9 @@ export default function Header() {
       <div className="top-navbar">
         <div className="container">
           <div className="row w-100 mx-auto justify-content-between align-items-center">
-            <div className="col-md-5">
+            <div className="col-7">
               <Carousel
-                className="bannerCarousel text-center w-100"
+                className="bannerCarousel text-center w-md-75"
                 indicators={false}
                 fade={true}
               >
@@ -31,11 +31,11 @@ export default function Header() {
                 </Carousel.Item>
               </Carousel>
             </div>
-            <div className="col-md-6 d-flex justify-content-end">
+            <div className="col-5 d-flex justify-content-end">
               <img
                 src={"images/Group 30.png"}
                 alt=""
-                style={{ width: "25%" }}
+                className="featureoffer"
               />
             </div>
           </div>
@@ -49,7 +49,10 @@ export default function Header() {
               {" "}
               <Image src={"images/logo.png"} alt="" />
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Toggle
+              aria-controls="responsive-navbar-nav"
+              className="pe-0"
+            />
           </div>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">

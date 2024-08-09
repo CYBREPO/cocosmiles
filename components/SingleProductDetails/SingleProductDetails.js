@@ -160,11 +160,10 @@ function SingleProductDetails({
             <div className="stock-status">In Stock</div>
             <div className="options">
               <div className="row">
-                <div className="col-6">
+                <div className="col-md-6">
                   <div className="color-options">
                     <label htmlFor="color">Color :</label>
                     <div className="color-buttons">
-                      <button className="color white" title="White"></button>
                       <button className="color blue" title="Blue"></button>
                       <button className="color orange" title="Orange"></button>
                       <button className="color pink" title="Pink"></button>
@@ -172,7 +171,7 @@ function SingleProductDetails({
                     </div>
                   </div>
                 </div>
-                <div className="col-6">
+                <div className="col-md-6">
                   <div className="capacity-options">
                     <label htmlFor="capacity">Capacity :</label>
                     <div className="radio-buttons">
@@ -207,7 +206,7 @@ function SingleProductDetails({
                     </div>
                   </div>
                 </div>
-                <div className="col-6">
+                <div className="col-5">
                   <div className="style-options">
                     <label htmlFor="style">Style :</label>
                     <div className="capsule">{singleproductstyles}</div>

@@ -3,8 +3,8 @@ import React from "react";
 function Aboutus() {
   return (
     <div>
-      <div className="row">
-        <div className="col-md-7">
+      <div className="row justify-content-between">
+        <div className="col-md-6">
           <img
             src="https://cocosmilecups.com/cdn/shop/files/Screenshot_74_ec7a64e5-0507-44ab-81ec-f17b32eb9a63_800x.png?v=1716312432"
             className="img-fluid"
@@ -12,9 +12,8 @@ function Aboutus() {
             style={{ borderRadius: "30px" }}
           />
         </div>
-        <div className="col-md-5 text-center">
-          <h2 className="display-7 my-4 text-center">KNOW MORE</h2>
-          <h2 className="display-5 my-4 text-center">About Us</h2>
+        <div className="col-md-5 text-start">
+          <h2 className="display-5 my-4 text-start">About Us</h2>
           <hr />
           <p>
             Simply dummy text of the printing and typesetting industry. Lorem

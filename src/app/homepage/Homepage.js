@@ -207,7 +207,7 @@ export default function Homepage() {
             </Tab>
           </Tabs>
 
-          <div className="text-center ">
+          <div className="text-center mt-4">
             <button type="button" className="btn btn-lg btn-success">
               View More
             </button>
@@ -216,7 +216,7 @@ export default function Homepage() {
       </section>
 
       <section className="latest-collection">
-        <h2 className="display-7 my-4 text-center">CHECKOUT LATEST OF</h2>
+        <h5 className="my-4 text-center">CHECKOUT LATEST OF</h5>
 
         <h2 className="display-5 mb-4 text-center" style={{ fontWeight: 400 }}>
           Our Collection
@@ -225,7 +225,8 @@ export default function Homepage() {
         <hr className="w-50 mx-auto" />
 
         <p className="text-center mb-5">
-          Simply dummy text of the printing and typesetting industry. <br />{" "}
+          Simply dummy text of the printing and typesetting industry.{" "}
+          <br className="d-none d-md-block" />
           Lorem Ipsum has been
         </p>
 
@@ -306,7 +307,6 @@ export default function Homepage() {
       <div className="secton-video py-md-5 my-md-4">
         <div className="row w-100 mx-auto justify-content-end align-items-center">
           <div className="col-md-5 text-center mb-5 mb-md-0 pe-md-5 me-md-5">
-            <h2 className="display-7 my-4 text-center">KNOW MORE</h2>
             <h2 className="display-5 my-4 text-center">About Us</h2>
             <hr />
             <p>
@@ -335,7 +335,7 @@ export default function Homepage() {
         <div className="container">
           <h2 className="display-5 my-4 text-center">Customer reviews</h2>
           <div className="row justify-content-between">
-            <div className="col-7 col-md-6">
+            <div className="col-md-6">
               <div className="d-flex align-items-end">
                 <h3 className="display-5 my-0 text-center">4.5</h3>
                 <div className="stars d-flex">
@@ -348,7 +348,7 @@ export default function Homepage() {
                 (20 Reviews)
               </div>
             </div>
-            <div className="col-5 col-md-6 d-flex mt-3 mt-md-0 justify-content-md-end align-items-center">
+            <div className="col-md-6 d-flex mt-3 mt-md-0 justify-content-md-end align-items-center">
               <Button variant="success" onClick={handleShow}>
                 Write a Review
               </Button>

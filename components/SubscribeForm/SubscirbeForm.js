@@ -11,7 +11,7 @@ function SubscirbeForm() {
             <p>Promotions, New Products And Sales. Directly To Your Inbox.</p>
             <Form>
               <Form.Group
-                className="d-flex align-items-center"
+                className="d-md-flex align-items-center"
                 controlId="exampleForm.ControlInput1"
               >
                 <Form.Control

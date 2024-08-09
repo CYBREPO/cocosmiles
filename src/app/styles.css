@@ -150,7 +150,19 @@ h7 {
   height: 100%;
 }
 .top-navbar .container img {
-  width: 50%;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .top-navbar .container img {
+    width: 50%;
+  }
+}
+.top-navbar .container .carousel-item {
+  font-size: 10px;
+}
+.top-navbar .carousel-control-next-icon,
+.top-navbar .carousel-control-prev-icon {
+  width: 15px;
 }
 
 .navbar-nav .nav-link {
@@ -210,6 +222,15 @@ h7 {
 .bannerCarousel img {
   filter: brightness(0.9);
 }
+@media screen and (max-width: 992px) {
+  .bannerCarousel img {
+    height: 63vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 20%;
+       object-position: 20%;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .latest-collection {
@@ -217,6 +238,7 @@ h7 {
   }
 }
 .latest-collection img {
+  height: 100%;
   width: 100%;
   filter: brightness(0.9);
   transition: all 0.5s ease-in-out;
@@ -336,6 +358,20 @@ h7 {
   opacity: 1;
   color: black;
 }
+@media screen and (max-width: 992px) {
+  .nav-tabs {
+    display: flex;
+  }
+  .nav-tabs .nav-item {
+    all: unset;
+    white-space: nowrap;
+    flex: 1;
+    flex-wrap: nowrap;
+  }
+  .nav-tabs .nav-item button {
+    font-size: 10px;
+  }
+}
 
 .tab-content {
   margin-top: 80px;
@@ -438,6 +474,10 @@ h7 {
   margin: 0;
 }
 
+.trending .slick-dots {
+  bottom: 0 !important;
+}
+
 section.review-slider {
   background: rgba(176, 209, 254, 0.13);
   padding: 50px 0 100px;
@@ -480,10 +520,10 @@ section.review-slider .container .card .quote {
 }
 section.review-slider .container .card .read-more {
   color: #333333;
-  text-decoration: none;
   font-size: 0.9em;
   display: block;
   text-align: right;
+  text-transform: capitalize;
 }
 
 .search-container {
@@ -572,6 +612,11 @@ section.review-slider .container .card .read-more {
   border-bottom-left-radius: 30px;
 }
 
+.slick-slide img {
+  display: block;
+  margin: auto;
+}
+
 .slick-slide {
   padding: 10px;
 }
@@ -586,4 +631,9 @@ input.checkbox {
 
 .stars {
   color: gold;
+}
+
+button {
+  outline: none !important;
+  border: none !important;
 }/*# sourceMappingURL=styles.css.map */

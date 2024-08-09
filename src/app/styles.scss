@@ -41,6 +41,7 @@ a {
     text-decoration: none;
 }
 
+
 button:focus {
     outline: none !important;
     box-shadow: none !important;
@@ -136,9 +137,26 @@ p {
         height: 100%;
 
         img {
-            width: 50%;
+
+            width: 100%;
+
+            @media screen and (min-width: 992px) {
+                width: 50%;
+            }
+
+
+        }
+
+        .carousel-item {
+            font-size: 10px;
         }
     }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 15px;
+    }
+
 }
 
 .navbar-nav {
@@ -205,6 +223,14 @@ p {
 .bannerCarousel {
     img {
         filter: brightness(0.9);
+
+
+        @media screen and (max-width: 992px) {
+            height: 63vh;
+            object-fit: cover;
+            object-position: 20%;
+
+        }
     }
 }
 
@@ -216,6 +242,8 @@ p {
     }
 
     img {
+        height: 100%;
+
         @media screen and (min-width: 992px) {
             height: 1039px;
         }
@@ -324,7 +352,6 @@ p {
     }
 
 
-
     margin: auto;
     letter-spacing: 1px;
 
@@ -354,6 +381,23 @@ p {
             opacity: 1;
             color: black;
 
+        }
+    }
+
+
+
+    @media screen and (max-width: 992px) {
+        display: flex;
+
+        .nav-item {
+            all: unset;
+            white-space: nowrap;
+            flex: 1;
+            flex-wrap: nowrap;
+
+            button {
+                font-size: 10px;
+            }
         }
     }
 }
@@ -475,11 +519,17 @@ p {
     }
 }
 
+.trending {
+    .slick-dots {
+        bottom: 0 !important;
+    }
+}
 
 // reviews
 section.review-slider {
     background: rgba(176, 209, 254, 0.13);
     padding: 50px 0 100px;
+
 }
 
 section.review-slider .container {
@@ -529,10 +579,10 @@ section.review-slider .container {
 
     .card .read-more {
         color: #333333;
-        text-decoration: none;
         font-size: 0.9em;
         display: block;
         text-align: right;
+        text-transform: capitalize;
     }
 }
 
@@ -638,6 +688,11 @@ section.review-slider .container {
 
 }
 
+.slick-slide img {
+    display: block;
+    margin: auto;
+}
+
 .slick-slide {
     padding: 10px;
 }
@@ -652,4 +707,11 @@ input.checkbox {
 
 .stars {
     color: gold;
+}
+
+
+button {
+    outline: none !important;
+    border: none !important;
+
 }

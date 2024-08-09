@@ -18,7 +18,11 @@
     .footer-section {
         flex: 1;
         min-width: 220px;
-        margin: 20px;
+        margin: 20px 0;
+
+        @media screen and (min-width: 992px) {
+            margin: 20px;
+        }
     }
 
     .footer-logo {
@@ -75,6 +79,7 @@
     .newsletter-form {
         display: flex;
         align-items: center;
+        flex-direction: column;
     }
 
     .newsletter-form input {
@@ -83,6 +88,15 @@
         border-radius: 5px;
         margin-right: 10px;
         flex-grow: 1;
+
+        @media screen and (max-width: 992px) {
+            width: 100%;
+            margin-right: 0;
+
+            &::placeholder {
+                text-align: center;
+            }
+        }
     }
 
     .newsletter-form button {
@@ -92,6 +106,11 @@
         background-color: #57b87a;
         color: white;
         cursor: pointer;
+
+        @media screen and (max-width: 992px) {
+            width: 100%;
+
+        }
     }
 
     .newsletter-form button:hover {
@@ -124,6 +143,7 @@
     .payment-icons img {
         max-width: 100%;
     }
+
 
 }
 
