@@ -142,10 +142,10 @@ export default function Categories() {
                   )
                 )} */}
 
-                {proddata.map((product, i) => (
+                {proddata.map((product, j) => (
                   <div className="col-md-4">
                     <ProductCard
-                      key={product.id}
+                      key={j}
                       productImage={product.images[0]}
                       productTitle={product.title}
                       productMetaTitle={product.category}
